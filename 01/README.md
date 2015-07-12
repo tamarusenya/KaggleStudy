@@ -16,7 +16,7 @@ kaggleの中の人が書いている？あるいはデフォルトで提示さ�
 - ランダムフォレスト with Python  
  <https://www.kaggle.com/thebrocean/titanic/benchmarking-random-forests>
 
-###提出済みデータ:自分が過去に提出した回答と得点の一覧  
+###自分の提出済みデータ:  
 <https://www.kaggle.com/c/titanic/submissions/>  
 
 
