@@ -2,7 +2,7 @@
 タイタニック号の乗客データをもとに、乗客の生存／死亡を判定する問題  
 <https://www.kaggle.com/c/titanic>  
 
-###スクリプト:kaggle登録者が保管しているスクリプトの一覧  
+###スクリプト一覧  
 <https://www.kaggle.com/c/titanic/scripts>  
 kaggleの中でもっとも有名な練習問題だが、提出されているスクリプトの多くは、
 kaggleの中の人が書いている？あるいはデフォルトで提示されている
