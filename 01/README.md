@@ -4,10 +4,6 @@
 
 ###スクリプト一覧  
 <https://www.kaggle.com/c/titanic/scripts>  
-kaggleの中でもっとも有名な練習問題だが、提出されているスクリプトの多くは、
-kaggleの中の人が書いている？あるいはデフォルトで提示されている
-ランダムフォレストの回答例をもとに編集されたもので、
-オリジナルのスクリプトはそれほど見つからない。
 
 - ランダムフォレスト with R  
  <https://www.kaggle.com/benhamner/titanic/random-forest-benchmark-r>
@@ -15,11 +11,11 @@ kaggleの中の人が書いている？あるいはデフォルトで提示さ�
 - ランダムフォレスト with Python  
  <https://www.kaggle.com/thebrocean/titanic/benchmarking-random-forests>
 
-###自分の提出済みデータ:  
+###自分の提出済みデータと得点:  
 <https://www.kaggle.com/c/titanic/submissions/>  
 
 
-###ランダムフォレスト参考資料
+###ランダムフォレスト参考資料  
 - 近畿大学  
 <http://www.habe-lab.org/habe/RFtutorial/CVIM_RFtutorial.pdf>
 
