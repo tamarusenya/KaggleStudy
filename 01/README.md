@@ -5,6 +5,15 @@
 訓練データとテストデータのダウンロード  
 <https://www.kaggle.com/c/titanic/data>
 
+pythonを使ってデータクリーニング、欠損値の補完  
+<https://www.kaggle.com/c/titanic/details/getting-started-with-python-ii>
+munging
+
+
+
+###自分の提出済みデータと得点:  
+<https://www.kaggle.com/c/titanic/submissions/>  
+
 
 ###この問題で正解率はどれくらい出せるか？
 <https://www.kaggle.com/c/titanic/forums/t/4894/what-accuracy-should-i-be-aiming-for>  
@@ -32,8 +41,6 @@ kaggle公式<https://www.kaggle.com/c/titanic/details/getting-started-with-rando
 <https://www.kaggle.com/thebrocean/titanic/benchmarking-random-forests>
 
 
-###自分の提出済みデータと得点:  
-<https://www.kaggle.com/c/titanic/submissions/>  
 
 
 ###ランダムフォレスト参考資料  
