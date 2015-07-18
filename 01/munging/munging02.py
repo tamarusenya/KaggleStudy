@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 using pandas
-
 年齢の平均値を算出するため、
 pandasを使って、欠損値を埋め、stringをfloatに変換する
+ヒストグラムとかも表示してみる
 
 https://www.kaggle.com/c/titanic/details/
 getting-started-with-python-ii
@@ -13,7 +13,7 @@ import pandas as pd
 import numpy as np
 import pylab as P
 
-df = pd.read_csv('data/train.csv',header=0)
+df = pd.read_csv('../data/train.csv',header=0)
 
 print df.head(3)
 
@@ -41,3 +41,4 @@ print df[df['Age'].isnull()][['Sex', 'Pclass', 'Age']]
 #年齢のヒストグラムのパラメータを変更する
 df['Age'].dropna().hist(bins=16, range=(0,80), alpha = .5)
 P.show()
+
