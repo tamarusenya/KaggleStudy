@@ -2,14 +2,35 @@
 タイタニック号の乗客データをもとに、乗客の生存／死亡を判定する問題  
 <https://www.kaggle.com/c/titanic>  
 
-###スクリプト一覧  
+###この問題で正解率はどれくらい出せるか？
+
+以下のページによると,統計モデルを使った予測としては、0.8以上は良スコア。
+ただ、0.9～1.0というような高スコアは、チートでないと出ないだろうとのこと。
+「女性のみ全員生存」という単純な予測をしても0.76が出せるので、
+かっこいい名前の統計モデルを使ったからと言って、
+飛躍的にスコアが伸びるというわけでもなさそう。
+
+ <https://www.kaggle.com/c/titanic/forums/t/4894/what-accuracy-should-i-be-aiming-for>
+
+参考スコア
+- 全員死亡(assume all perished):0.626
+- 女性のみ生存(gender based model):0.7655
+- ランダムフォレスト(My first random forrest):0.77512
+- 性別、クラス、運賃による予測(Gender, Price and Class Based Model):0.77990
+
+
+###参考になるスクリプトなど  
+####スクリプト一覧
 <https://www.kaggle.com/c/titanic/scripts>  
 
 - ランダムフォレスト with R  
- <https://www.kaggle.com/benhamner/titanic/random-forest-benchmark-r>
+<https://www.kaggle.com/c/titanic/details/new-getting-started-with-r>
+<https://www.kaggle.com/benhamner/titanic/random-forest-benchmark-r>
 
 - ランダムフォレスト with Python  
- <https://www.kaggle.com/thebrocean/titanic/benchmarking-random-forests>
+<https://www.kaggle.com/c/titanic/details/getting-started-with-random-forests>　　
+<https://www.kaggle.com/thebrocean/titanic/benchmarking-random-forests>
+
 
 ###自分の提出済みデータと得点:  
 <https://www.kaggle.com/c/titanic/submissions/>  
