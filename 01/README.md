@@ -7,15 +7,14 @@
 
 
 ###この問題で正解率はどれくらい出せるか？
+<https://www.kaggle.com/c/titanic/forums/t/4894/what-accuracy-should-i-be-aiming-for>  
 統計モデルを使った予測としては0.8以上は良スコアだが、0.9～1.0はチートでないと
 出ないスコアとのこと。「女性のみ全員生存」という単純な予測をしても0.76が出せるので、
 かっこいい名前の統計モデルを使ったからと言って、飛躍的にスコアが
 伸びるというわけでもない模様。
 
- <https://www.kaggle.com/c/titanic/forums/t/4894/what-accuracy-should-i-be-aiming-for>
 
-参考スコア  
-<https://www.kaggle.com/c/titanic/leaderboard>
+参考スコア<https://www.kaggle.com/c/titanic/leaderboard>  
 - 全員死亡(assume all perished):0.626
 - 女性のみ生存(gender based model):0.7655
 - ランダムフォレスト(My first random forrest):0.77512
