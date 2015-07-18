@@ -7,7 +7,7 @@
 
 pythonを使ってデータクリーニング、欠損値の補完、
 <https://www.kaggle.com/c/titanic/details/getting-started-with-python-ii>  
-
+[munging](munging/README.md)
 
 
 
