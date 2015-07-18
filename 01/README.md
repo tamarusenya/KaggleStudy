@@ -7,15 +7,15 @@
 
 pythonを使ってデータクリーニング、欠損値の補完、
 <https://www.kaggle.com/c/titanic/details/getting-started-with-python-ii>  
-[munging](munging/README.md)
+[munging](munging)
 
 
 
-###自分の提出済みデータと得点:  
+自分の提出済みデータと得点の確認:
 <https://www.kaggle.com/c/titanic/submissions/>  
 
 
-###この問題で正解率はどれくらい出せるか？
+この問題で正解率はどれくらい出せるか？  
 <https://www.kaggle.com/c/titanic/forums/t/4894/what-accuracy-should-i-be-aiming-for>  
 統計モデルを使った予測としては0.8以上は良スコアだが、0.9～1.0はチートスコアとのこと。
 「女性のみ全員生存」という単純な予測をしても0.76が出せるので、
@@ -28,8 +28,8 @@ pythonを使ってデータクリーニング、欠損値の補完、
 - ランダムフォレスト(My first random forrest):0.77512
 - 性別、クラス、運賃による予測(Gender, Price and Class Based Model):0.77990
 
-###参考になるスクリプトなど  
-####公開スクリプト一覧
+####参考になるスクリプトなど  
+公開スクリプト一覧  
 <https://www.kaggle.com/c/titanic/scripts>  
 
 - ランダムフォレスト with R  
@@ -41,9 +41,7 @@ kaggle公式<https://www.kaggle.com/c/titanic/details/getting-started-with-rando
 <https://www.kaggle.com/thebrocean/titanic/benchmarking-random-forests>
 
 
-
-
-###ランダムフォレスト参考資料  
+####ランダムフォレスト参考資料  
 - 近畿大学  
 <http://www.habe-lab.org/habe/RFtutorial/CVIM_RFtutorial.pdf>
 
