@@ -4,13 +4,16 @@
 <https://www.kaggle.com/c/titanic>  
 
 ##データの整理・分析
-- 訓練データとテストデータのダウンロード [data](data)  
+- 訓練データとテストデータのダウンロード  
+[data](data)  
 <https://www.kaggle.com/c/titanic/data>  
-- pythonのpandasを使ってデータのクリーニング
+- pythonのpandasを使ってデータのクリーニング  
 <https://www.kaggle.com/c/titanic/details/getting-started-with-python-ii>  
-- pythonを使ってランダムフォレスト [RundomForest_Python](RundomForest_Python)  
+- pythonを使ってランダムフォレスト  
+[RundomForest_Python](RundomForest_Python)  
 <https://www.kaggle.com/c/titanic/details/getting-started-with-random-forests>  
-- Rを使ってランダムフォレスト  [RundomForest_R](RundomForest_R)  
+- Rを使ってランダムフォレスト  
+[RundomForest_R](RundomForest_R)  
 <https://www.kaggle.com/c/titanic/details/new-getting-started-with-r>
 
 ##スコア  
