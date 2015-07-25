@@ -28,10 +28,10 @@ features = pd.Series(forest_test.feature_importances_,index = test_mng_df.column
 features.plot(kind='barh')
 plt.title('Randomforest feature importances')
 plt.show()
-plt.savefig("feature_importances.png")
+plt.savefig('forest_result/feature_importances.png')
 
 ##予測結果を入れるためのCSVファイルを作る
-predictions_file = open('../data/MyFirstForest.csv', "wb")
+predictions_file = open('forest_result/ForestResult.csv', "wb")
 #CSVファイルをpythonで開く
 open_file_object = csv.writer(predictions_file)
 #列名を書き込む

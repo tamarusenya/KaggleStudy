@@ -7,7 +7,7 @@
 - 訓練データとテストデータのダウンロード  
 [data](data)  
 <https://www.kaggle.com/c/titanic/data>  
-- pythonのpandasを使ってデータのクリーニング  
+- pythonのpandasを使ってデータクレンジング  
 <https://www.kaggle.com/c/titanic/details/getting-started-with-python-ii>  
 - pythonを使ってランダムフォレスト  
 [RundomForest_Python](RundomForest_Python)  
