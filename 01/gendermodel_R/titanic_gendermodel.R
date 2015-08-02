@@ -41,27 +41,26 @@ summary(train$Age)
 ###18才未満を子供とする変数を作る
 train$Child <- 0
 train$Child[train$Age < 18] <- 1 
-#* こ???段階では???年齢の???ータはすべてゼロになって???る（???ちに平???値を代入することになるらしい???
-#* Rでは???変数を追???するtransform()と??????関数もあるらしい
+#* この段階では，年齢のデータはすべてゼロになっている（のちに平均値を代入することになるらしい）
+#* Rでは，変数を追加するtransform()という関数もあるらしい
 
-###生存???のみにつ???て???子供×性別でグループ???けをして??????
+###生存者のみについて，子供×性別でグループ分けをして集計
 aggregate(Survived ~ Child + Sex, data=train, FUN=sum)
-#* aggregate関数は???グループごとに???計する関数。この場合，子供とnon子供グループに???け，性別でグループにわけて???生存???数を集計して??????
-#* aggregateには???aggregate(x,by,FUN)と??????書き方もあるらしいので???後で調べ???
-#* 引数のFUNで統計量を指定す???
+#* aggregate関数は，グループごとに集計する関数。この場合，
+#* 子供とnon子供グループに分け，性別でグループにわけて，生存者数を集計している
+#* aggregateには，aggregate(x,by,FUN)という書き方もあるらしいので，後で調べる
+#* 引数のFUNで統計量を指定する
 
-###乗船???全員につ???て???子供×性別でグループ???けをして??????
+###乗船者全員について，子供×性別でグループ分けをして集計
 aggregate(Survived ~ Child + Sex, data=train, FUN=length)
-#* 生存???と死亡??????つまり，???乗船???を集計対象として???る点に注???
-#* FUNでlengthを指定することで全乗船???を対象として???る。Survivedの0と1のどちらもカウン???
+#* 生存者と死亡者，つまり，全乗船者を集計対象としている点に注意
+#* FUNでlengthを指定することで全乗船者を対象としている。Survivedの0と1のどちらもカウント
 
-
-###Subsetごとに生存率を算???する  
-###子供変数をみても，生死を???ける決定的な要因になって???な???(っぽ???)ことが???かる
-aggregate(Survived ~ Child + Sex, data=train, function(x){(sum(x)/length(x))})
+###Subsetごとに生存率を算出する
+###子供変数をみても，生死を分ける決定的な要因になっていない(っぽい)ことが分かる
+#* aggregate(Survived ~ Child + Sex, data=train, function(x){(sum(x)/length(x))})
 #* We need to create a function that takes the subset vector as input and applies both the sum and length commands to it, and then does the division to give us a proportion
-#* function(x)に続く{}???の処???を各Subsetに対して実行す???(?)
-
+#* function(x)に続く{}内の処理を各Subsetに対して実行する(?)
 
 ###船賃に注目
 ###船賃を連続データからカテゴリーデータに変える
