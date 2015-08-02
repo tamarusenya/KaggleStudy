@@ -69,18 +69,18 @@ test_df.loc[(test_df.Port == 0), 'PortFill'] = test_df['Port'].median()
 
 
 ##不要なデータを落とす
-##Name,Ticket,Cabinは、因果関係が不明なため
+##Name,Ticket,Cabin,Parchは、因果関係が不明なため
 ##Age,Fare,Sex,Embarked,PassengerIdは、Agefill,Gender,Portに代替し不要なため
-train_df = train_df.drop(['Name','Ticket','Cabin','Age','Sex','Fare','Embarked','PassengerId','Port'],axis=1)
-test_df = test_df.drop(['Name','Ticket','Cabin','Age','Sex','Fare','Embarked','PassengerId','Port'],axis=1)
+train_df = train_df.drop(['Name','Ticket','Cabin','Age','Sex','Fare','Embarked','PassengerId','Port','PortFill','Parch'],axis=1)
+test_df = test_df.drop(['Name','Ticket','Cabin','Age','Sex','Fare','Embarked','PassengerId','Port','PortFill','Parch'],axis=1)
 
 ##クリーン後の2次データをCSVで出力する
-train_df.to_csv('train_mng.csv')
-test_df.to_csv('test_mng.csv')
+train_df.to_csv('train_cln.csv')
+test_df.to_csv('test_cln.csv')
 
 #データの読み込み
-train_mng_df = pd.read_csv('train_mng.csv',index_col=0, header=0)
-test_mng_df = pd.read_csv('test_mng.csv',index_col=0, header=0)
+train_mng_df = pd.read_csv('train_cln.csv',index_col=0, header=0)
+test_mng_df = pd.read_csv('test_cln.csv',index_col=0, header=0)
 
 print train_mng_df.info()
 print test_mng_df.info()
