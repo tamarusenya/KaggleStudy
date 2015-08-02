@@ -5,6 +5,7 @@ import numpy as np
 import pylab as P
 import csv
 from sklearn.ensemble import RandomForestClassifier 
+#from sklearn.ensemble import ExtraTreesClassifier 
 import matplotlib.pyplot as plt
 from sklearn import cross_validation
 
@@ -19,23 +20,23 @@ test_mng_data = test_mng_df.values
 #randomforestの適用
 #https://www.kaggle.com/c/titanic/details/getting-started-with-random-forests
 ##モデル(forest_test)の定義とパラメータの入力(n_estimators = 100)
-forest_test = RandomForestClassifier(n_estimators = 100)
+forest_test = RandomForestClassifier(n_estimators = 100, criterion = "entropy" ,max_features = None)
 ##モデルに訓練データtrain_data[0::,1::]と、訓練ラベルtrain_data[0::,0](Survived)を入れる
-#forest_test = forest_test.fit(train_mng_data[0::,1::],train_mng_data[0::,0])
+forest_test = forest_test.fit(train_mng_data[0::,1::],train_mng_data[0::,0])
 ##上で学習されたモデルにテストデータを入力し、予測結果をoutputとする
-#output = forest_test.predict(test_mng_data)
+output = forest_test.predict(test_mng_data)
 
 cv = 10
 scores = cross_validation.cross_val_score(forest_test,train_mng_data[0::,1::],train_mng_data[0::,0],cv=cv)
 print(sum(scores)/cv)
 
-"""
 #特徴量の重要度をグラフ表示
-#features = pd.Series(forest_test.feature_importances_,index = test_mng_df.columns)
-#features.plot(kind='barh')
-#plt.title('Randomforest feature importances')
-#plt.show()
+features = pd.Series(forest_test.feature_importances_,index = test_mng_df.columns)
+features.plot(kind='barh')
+plt.title('Randomforest feature importances')
+plt.show()
 #plt.savefig('forest_result/feature_importances.png')
+
 
 ##予測結果を入れるためのCSVファイルを作る
 predictions_file = open('forest_result/ForestResult.csv', "wb")
@@ -47,4 +48,3 @@ open_file_object.writerow(["Survived"])
 open_file_object.writerows(zip(output))
 #CSVファイルを閉じる
 predictions_file.close()
-"""

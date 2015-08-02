@@ -15,8 +15,8 @@ library(randomForest)
 set.seed(1)
 
 #train dataとtest dataを読み込む
-train <- read.csv("../train.csv", stringsAsFactors=FALSE)
-test  <- read.csv("../test.csv",  stringsAsFactors=FALSE)
+train <- read.csv("../data/train.csv", stringsAsFactors=FALSE)
+test  <- read.csv("../datatest.csv",  stringsAsFactors=FALSE)
 
 #extractFeatures()という関数を定義する
 #各変数をfreaturesでまとめる

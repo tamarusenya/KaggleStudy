@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+#scikitlearn のランダムフォレストのソースコード
+#https://github.com/scikit-learn/scikit-learn/blob/03b09a482f5fe3eb689330180044f3c9604e1542/sklearn/ensemble/forest.py
+
 import pandas as pd
 import numpy as np
 import pylab as P
