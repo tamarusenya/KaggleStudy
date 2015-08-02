@@ -1,10 +1,8 @@
-# This script trains a Random Forest model based on the data,
-# saves a sample submission, and plots the relative importance
-# of the variables in making predictions
-
-# Download 1_random_forest_r_submission.csv from the output below
-# and submit it through https://www.kaggle.com/c/titanic-gettingStarted/submissions/attach
-# to enter this getting started competition!
+# -*- coding: utf-8 -*-
+# train_cln.csvとtest_cln.csvを使って、
+#pythonとRのランダムフォレストのスコアを比較する
+#tree:100
+#情報量：エントロピー
 
 #libraryを読み込む
 library(ggplot2)
@@ -15,37 +13,22 @@ library(randomForest)
 set.seed(1)
 
 #train dataとtest dataを読み込む
-train <- read.csv("../data/train.csv", stringsAsFactors=FALSE)
-test  <- read.csv("../data/test.csv",  stringsAsFactors=FALSE)
+train <- read.csv("cleaning/train_cln.csv", stringsAsFactors=FALSE)
+test  <- read.csv("cleaning/test_cln.csv",  stringsAsFactors=FALSE)
 
 #extractFeatures()という関数を定義する
 #各変数をfreaturesでまとめる
 extractFeatures <- function(data) {
   features <- c("Pclass",
-                "Age",
-                "Sex",
-                "Parch",
+                "AgeFill",
+                "Gender",
                 "SibSp",
-                "Fare",
-                "Embarked")
+                "FareFill")
   fea <- data[,features]
   
-  # NAに-1を代入
-  fea$Age[is.na(fea$Age)] <- -1 
-  # NAに運賃の中央値を代入
-  fea$Fare[is.na(fea$Fare)] <- median(fea$Fare, na.rm=TRUE)
-  # ==""で文字列かどうかを判定。TrueならＳを代入
-  fea$Embarked[fea$Embarked==""] = "S"
-  # ベクトルの要素を仲間同士を近くに並べて新しいベクトルを作る
-  fea$Sex      <- as.factor(fea$Sex)
-  fea$Embarked <- as.factor(fea$Embarked)
   return(fea)
 }
-#参考(fea$Age[is.na(fea$Age)])#######
-# P <- matrix(c(1,2,NA,4),2,2)
-# P[is.na(P)] <- 1
-# P
-#####################################
+
 
 #上で作った関数extractFeaturesにtrainデータを代入
 #ntreeは木の数。デフォルトは500
@@ -55,7 +38,7 @@ rf <- randomForest(extractFeatures(train), as.factor(train$Survived), ntree=100,
 submission <- data.frame(PassengerId = test$PassengerId)
 #predictは，モデル（ここではrf）と，データフレームを与えると応答変数を返してくれる
 submission$Survived <- predict(rf, extractFeatures(test))
-write.csv(submission, file = "1_random_forest_r_submission.csv", row.names=FALSE)
+write.csv(submission, file = "vs_result/ForestR.csv", row.names=FALSE)
 
 #importanceは，特徴量の重要度を計算する関数
 #http://alfredplpl.hatenablog.com/entry/2013/12/24/225420
@@ -71,4 +54,4 @@ p <- ggplot(featureImportance, aes(x=reorder(Feature, Importance), y=Importance)
   ggtitle("Random Forest Feature Importance\n") +
   theme(plot.title=element_text(size=18))
 
-ggsave("2_feature_importance.png", p)
+ggsave("vs_result/forestR_importance.png", p)
