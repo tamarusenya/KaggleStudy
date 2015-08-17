@@ -3,7 +3,15 @@
 データ分析のビギナーに向け、データの整理、分析方法についても説明されている。  
 <https://www.kaggle.com/c/titanic>  
 
-##データの整理・分析
+- data：訓練データとテストデータが入っている
+- gendermodel_R:Rを使った分析と予測
+- Randomforest_R:Rを使ったランダムフォレストによる予測
+- Randomforest_Python:Pythonを使ったランダムフォレストによる予測(scikitlearn)
+- Solver_python:Pythonを使った各種予測(SVC,LogitRegglession,KNN,RandomForest)
+
+
+##以下、参考情報
+###データの整理・分析
 - 訓練データとテストデータのダウンロード  
 [data](data)  
 <https://www.kaggle.com/c/titanic/data>  
@@ -18,7 +26,7 @@
 <https://www.kaggle.com/c/titanic/details/new-getting-started-with-r>
 <https://github.com/wehrley/wehrley.github.io/blob/master/SOUPTONUTS.md>  
 
-##スコア  
+###kaggleスコア  
 - 自分の提出済みデータと得点の確認:  
 <https://www.kaggle.com/c/titanic/submissions/>  
 - この問題で正解率はどれくらい出せるか？  
@@ -34,7 +42,7 @@
   ランダムフォレスト(My first random forrest):0.77512  
   性別、クラス、運賃による予測(Gender, Price and Class Based Model):0.77990
 
-##スクリプト  
+###公開スクリプト  
 - 公開スクリプト一覧  
 <https://www.kaggle.com/c/titanic/scripts>  
 - ランダムフォレスト with R  
@@ -42,8 +50,7 @@
 - ランダムフォレスト with Python  
 <https://www.kaggle.com/thebrocean/titanic/benchmarking-random-forests>
 
-
-##ランダムフォレスト参考資料  
+##ランダムフォレスト資料  
 - Qiita Pythonで機械学習
 <http://qiita.com/HirofumiYashima/items/b296a81ba918fac2353e>
 - 近畿大学  

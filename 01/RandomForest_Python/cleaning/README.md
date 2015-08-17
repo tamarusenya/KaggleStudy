@@ -36,16 +36,17 @@ testデータ
     Cabin          91 non-null object
     Embarked       418 non-null object
 
-##クレンジングの方針  
+##データクリーニングの方針  
 - Name,Ticket,Cabinについては、客の生死と関わりがあるか不明なので、無視
-- object型のSex,Embarkedは、int型に変換する(Gender,Port)
-- Age,Fareの欠損は、中央値で代替する(AgeFill,FareFill)
-- Embarkedの欠損は、最頻値で代替する(PortFill)
+- object型のSex,Embarkedは、int型に変換する(Gender,Port0,Port1,Port2)
+- Ageの欠損データは、その他のデータよりrandom forestを使って予測する(AgeFill)
+- Fareの欠損データは、その他のデータよりrandom forestを使って予測する(FareFill)
+- Portの欠損データは、その他のデータよりrandom forestを使って予測する(PortFill)
 
-trainデータのクレンジング後  
+trainデータのクリーニング後  
 
-    train_mng_df = pd.read_csv('train_mng.csv',index_col=0, header=0)
-    train_mng_df.info()
+    train_cln_df = pd.read_csv('train_cln.csv',index_col=0, header=0)
+    train_cln_df.info()
 
     Data columns (total 8 columns):
     Survived    891 non-null int64
@@ -57,10 +58,10 @@ trainデータのクレンジング後
     FareFill    891 non-null float64
     PortFill    891 non-null float64
 
-testデータのクレンジング後  
+testデータのクリーニング後  
 
-    test_mng_df = pd.read_csv('test_mng.csv',index_col=0, header=0)
-    test_mng_df.info()
+    test_cln_df = pd.read_csv('test_cln.csv',index_col=0, header=0)
+    test_cln_df.info()
 
     Data columns (total 7 columns):
     Pclass      418 non-null int64
